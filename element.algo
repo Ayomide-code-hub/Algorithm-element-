@@ -1,0 +1,35 @@
+    Algorithm CountSentence
+
+Variables
+    sentence : String
+    character : Character
+    length, words, vowels : Integer
+
+Begin
+    length := 0
+    words := 1
+    vowels := 0
+
+    Read(sentence)
+
+    For each character in sentence DO
+        length := length + 1
+
+        IF character = ' ' THEN
+            words := words + 1
+        END_IF
+
+        IF character = 'a' OR character = 'e' OR character = 'i'
+    OR character = 'o' OR character = 'u'
+    OR character = 'A' OR character = 'E' OR character = 'I'
+    OR character = 'O' OR character = 'U' THEN
+            vowels := vowels + 1
+        END_IF
+
+    END_FOR
+
+    Write("Length: ", length)
+    Write("Words: ", words)
+    Write("Vowels: ", vowels)
+
+End 
